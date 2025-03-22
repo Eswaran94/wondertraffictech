@@ -1,0 +1,285 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+}
+
+/* Header Styles */
+.header-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vw / 3); /* 3:1 ratio */
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.699);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.headline {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+}
+
+.sub-headline {
+  font-size: 1.2rem;
+  margin-top: 19%;
+  font-weight: bold;
+}
+
+/* Arrow Animation */
+.arrow-down {
+  font-size: 2rem;
+  margin-top: 10px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+}
+
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-info, .contact-form {
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 45%;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-info:hover, .contact-form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h2, .contact-form h2 {
+    color: #004080;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.contact-info p, .contact-form p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: #004080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0066cc;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+/* Footer Section */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-quick-access {
+    margin-bottom: 20px;
+  }
+  
+  .footer-quick-access button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-quick-access button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+  }
+  
+  .slogan {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details {
+    font-size: 0.9rem;
+  }
+
+/* Mobile Layout Changes */
+@media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack elements vertically on smaller devices */
+      gap: 15px;
+    }
+  }
+  
+  /* For very small devices like phones */
+  @media (max-width: 480px) {
+    .footer-links li,
+    .social-link {
+      font-size: 0.9rem; /* Adjust font size */
+    }
+  }
+  
+  /* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .header-container {
+    height: calc(50vw);
+  }
+  .sub-headline {
+    font-size: 0.5rem;
+    margin-top: 20%;
+    left: 50%;
+    font-weight: bold;
+}
+.arrow-down {
+    font-size: 0.9rem; /* Smaller arrow size */
+}
+.About-parag {
+  font-size: 1rem;
+}  
+
+.logo {
+  height: 10%;
+  width: 10%;
+  
+} 
+.logo img {
+  height: 20px;
+  margin-left: -10%;
+
+}
+.footer-quick-access button {
+  margin-top: 5%;}
+      
+  }
+
+@media screen and (max-width: 480px) {
+  
+  .headline {
+      font-size: 1.0rem;
+      margin-left: 1%;
+      
+  }
+
+  .About-parag {
+    font-size: 1rem;
+  } 
+
+  .sub-headline {
+      font-size: 0.5rem;
+      margin-top: 30%;
+      left: 50%;
+      font-weight: bold;
+  }
+  .arrow-down {
+      font-size: 0.9rem; /* Smaller arrow size */
+  }
+
+  .logo {
+    height: 10%;
+    width: 10%;
+    
+} 
+.logo img {
+    height: 20px;
+    margin-left: -10%;
+
+}
+
+.footer-quick-access button {
+  margin-top: 5%;}
+  
+}

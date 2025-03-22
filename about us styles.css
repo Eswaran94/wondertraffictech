@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+}
+
+/* Header Section */
+.header-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vw / 4); /* 2:1 ratio */
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.616);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+}
+
+.sub-headline {
+  font-size: 1.8rem;
+  margin-top: 15%;
+  font-weight: bold;
+}
+
+/* Arrow Animation */
+.arrow-down {
+  font-size: 2rem;
+  margin-top: 10px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+}
+
+
+/* Interactive Section */
+.About-parag {
+  font-size: 1.8rem;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  color: rgb(77, 76, 76);
+}
+
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    margin: 10px 0;
+    color: #004080;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-quick-access {
+    margin-bottom: 20px;
+  }
+  
+  .footer-quick-access button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-quick-access button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+  }
+  
+  .slogan {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details {
+    font-size: 0.9rem;
+  }
+
+/* Mobile Layout Changes */
+@media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack elements vertically on smaller devices */
+      gap: 15px;
+    }
+  }
+  
+  /* For very small devices like phones */
+  @media (max-width: 480px) {
+    .footer-links li,
+    .social-link {
+      font-size: 0.9rem; /* Adjust font size */
+    }
+  }
+  
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .header-container {
+    height: calc(50vw);
+  }
+  .sub-headline {
+    font-size: 0.5rem;
+    margin-top: 20%;
+    left: 50%;
+    font-weight: bold;
+}
+.arrow-down {
+    font-size: 0.9rem; /* Smaller arrow size */
+}
+.About-parag {
+  font-size: 1rem;
+}  
+
+.logo {
+  height: 10%;
+  width: 10%;
+  
+} 
+.logo img {
+  height: 20px;
+  margin-left: -10%;
+
+}
+.footer-quick-access button {
+  margin-top: 5%;}
+      
+  }
+
+@media screen and (max-width: 480px) {
+  
+  .headline {
+      font-size: 1.0rem;
+      margin-left: 1%;
+      
+  }
+
+  .About-parag {
+    font-size: 1rem;
+  } 
+
+  .sub-headline {
+      font-size: 0.5rem;
+      margin-top: 30%;
+      left: 50%;
+      font-weight: bold;
+  }
+  .arrow-down {
+      font-size: 0.9rem; /* Smaller arrow size */
+  }
+
+  .logo {
+    height: 10%;
+    width: 10%;
+    
+} 
+.logo img {
+    height: 20px;
+    margin-left: -10%;
+
+}
+
+.footer-quick-access button {
+  margin-top: 5%;}
+  
+}
